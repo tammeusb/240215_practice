@@ -1,18 +1,19 @@
-const log = document.querySelector(".log");
-
 const removeFromArray = function(array, ...removeElement) {
+    //loop to check if array still has any values from removeElement?
+    let i = 1;
+    removeElement = removeElement.sort()
 
-    let i = 0;
-
-    removeElement = removeElement.sort();
-
-    for (const element of removeElement) {
-        array.splice(element - 1 - i, 1);
-        i++;
+    for (let a = 0; a < 10; a++) {
+        for (const element of removeElement) {
+            for (const arrayElement of array) {
+                if (element == arrayElement) {
+                    console.log(true);
+                    array = array.toSpliced(arrayElement - i, 1);
+                    console.log(array);
+                   //loop to check if any same left???
+                }
+            }
+        }
     }
-
     return array
-
 }
-
-removeFromArray([1,2,2,3,4], 2, 3, 4);
