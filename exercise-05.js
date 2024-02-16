@@ -1,4 +1,10 @@
-const sumAll = function(numOne, numTwo) {
+const sumAll = function(unsortedOne, unsortedTwo) {
+
+    const args = Array.from(arguments);
+    args.sort();
+
+    let numOne = args[0];
+    let numTwo = args[1];
 
     let sum = numOne;
 
